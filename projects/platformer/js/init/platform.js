@@ -42,7 +42,7 @@
         createPlatform(550, 250,0.9,0.3);        //6th// 
         createPlatform(350, 300, 0.5,0.5) //5th// 
         createPlatform(200, 350,0.5,0.3)  //4th//
-        createPlatform(0, 400,0.5,0.3)    //3rd//
+        createPlatform(0, 400,0.4,0.3)    //3rd//
         createPlatform(300, 450, 0.9, 0.5) //2nd//
         createPlatform(9, 550, 0.9, 0.5); //1st//
         
