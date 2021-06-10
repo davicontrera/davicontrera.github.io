@@ -25,11 +25,12 @@
         let createCannon = cannon.create;
         ////////////////////////////////////////////////////////////////////////
         // ALL YOUR CODE GOES BELOW HERE ///////////////////////////////////////
-        
+
         // example: 
-        createCannon("top", 450);
-        createCannon("top", 450); // a cannon on the top of the screen, located at x = 450
-        createCannon("left", 300, 5000); // a cannon on the left side of the screen, located at y = 300, with a 1 second delay (1000ms)
+    
+        createCannon("top", 600,1111);
+        createCannon("top", 800);
+        createCannon("left", 200,10000);
         
         // ALL YOUR CODE GOES ABOVE HERE ///////////////////////////////////////
         ////////////////////////////////////////////////////////////////////////
