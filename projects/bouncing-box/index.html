@@ -8,7 +8,7 @@
 		.box {
 			width: 70px;
 			height: 70px;
-			background-color: teal;
+			background-color: maroon;
 			font-size: 300%;
 			text-align: center;
 			display: block;
@@ -61,17 +61,24 @@
 			//////////////////////////////////////////////////////////////////
 			
 			// TODO 2 - Variable declarations 
-			
-
-			
+			var positionX = 0;
+            var speedX = 10;
+            var points = 0;
 			/* 
 			This Function will be called 20 times/second. Each time it is called,
 			it should move the Box to a new location. If the box drifts off the screen
 			turn it around! 
 			*/
 			function update() {
-				
-
+                positionX += speedX;
+                $box.css("left", positionX);
+               
+                if (positionX > boardWidth) {
+                    speedX = -speedX;
+                }
+                if (positionX < 0) {
+                    speedX = -speedX;
+                }
 			};
 
 			/* 
@@ -80,9 +87,11 @@
 			the left side of the screen.
 			*/
 			function handleBoxClick() {
-				
-
-
+				debugger;
+                points += 1;
+                $box.text(points);
+                speedX += 3;
+                positionX = 0;
 			};
 		})();
 	</script>
