@@ -61,9 +61,19 @@
 			//////////////////////////////////////////////////////////////////
 			
 			// TODO 2 - Variable declarations 
+			var $box = $('.box');
+			var boardWidth = $('.board').width();
 			var positionX = 0;
             var speedX = 10;
             var points = 0;
+			var positionY;
+			var speedY;
+			function moveBoxTo(newPositionX, newPositionY) {
+    		box.css('left', newPositionX);
+   			 box.css('top', newPositionY);
+			}
+			var boardHeight = jQuery(window).height(); 
+
 			/* 
 			This Function will be called 20 times/second. Each time it is called,
 			it should move the Box to a new location. If the box drifts off the screen
