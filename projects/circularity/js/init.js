@@ -38,6 +38,14 @@ var drawCircle = function(){
         drawCircle();
         drawCircle();
         drawCircle();
+        var loopsCompleted = 0; 
+while (loopsCompleted < 10) {
+    // do something
+    loopsCompleted++
+}
+for (var loopsCompleted = 0; loopsCompleted < 10; loopsCompleted++) {
+    // do something
+}
         ////////////////////////////////////////////////////////////
         ///////////////// PROGRAM LOGIC ////////////////////////////
         ////////////////////////////////////////////////////////////
@@ -50,24 +58,22 @@ var drawCircle = function(){
        var update = function(){
 
             // TODO 4 : Update the circle's position //
-        physikz.updatePostion(circle[0]);
-        physikz.updatePostion(circle[1]);
-        physikz.updatePostion(circle[2]);
-        physikz.updatePostion(circle[3]);
-        physikz.updatePostion(circle[4]);
+
 
 
 
             // TODO 5 / 10 : Call game.checkCirclePosition() on your circles.
-
-           // TODO 5 : Call game.checkCirclePosition() on your circles.
-
-
+            physikz.updatePosition(eachCircle)
+            game.checkCirclePosition(eachCircle)
 
 
             // TODO 9 : Iterate over the array
-       }
-            // code to repeat using eachValue
+            for (var i = 0; i < myArray.length; i++) {
+                var eachValue = myArray[i];
+                
+                // code to repeat using eachValue
+            
+            }
         }
     }
         /* 
@@ -81,6 +87,9 @@ var drawCircle = function(){
 
             
             // TODO 7 : YOUR CODE STARTS HERE //////////////////////
+            if (circle.x > canvas.width) {
+                circle.x = 0;
+            }
 
 
             
@@ -101,7 +110,7 @@ var drawCircle = function(){
         
         app.addUpdateable(window.opspark.game);
     }
-
+}
 
 // DON'T REMOVE THIS CODE //////////////////////////////////////////////////////
 if((typeof process !== 'undefined') &&
