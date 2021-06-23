@@ -21,7 +21,7 @@ var init = function (window) {
         
         // TODO 1 : Declare and initialize our variables
         var circle;			// variable to hold a single circle when creating circles / iterating
-        var circles = [];	// variable to store all circles in one Array
+        var circles = [9];	// variable to store all circles in one Array
 
 
         // TODO 2 : Create a function that draws a circle 
@@ -31,7 +31,7 @@ var init = function (window) {
         circles.push(circle);
         
         // TODO 3 / 8 : Call the drawCircle() function 
-        var loopsCompleted = 0; 
+        var loopsCompleted = 0;
         while (loopsCompleted < 10) {
             // do something
             loopsCompleted++
@@ -50,21 +50,17 @@ var init = function (window) {
         and check to see if it has drifted off the screen.         
         */
             // TODO 4 : Update the circle's position //
-            function update(){
-                physikz.updatePosition([0]);
-                physikz.updatePosition([1]);
-                physikz.updatePosition([2]);
-                physikz.updatePosition([3]);
-                physikz.updatePosition([4]);
-            
+
+
+
+
             // TODO 5 / 10 : Call game.checkCirclePosition() on your circles.
+            physikz.updatePosition(eachCircle)
+            game.checkCirclePosition(eachCircle)
            // TODO 5 : Call game.checkCirclePosition() on your circles.
 
-                game.checkCirclePosition([0]);
-                game.checkCirclePosition([1]);
-                game.checkCirclePosition([2]);
-                game.checkCirclePosition([3]);
-                game.checkCirclePosition([4]);
+
+
 
             // TODO 9 : Iterate over the array
            for (var i = 0; i < myArray.length; i++) {
@@ -86,9 +82,10 @@ var init = function (window) {
             }
             
             // TODO 7 : YOUR CODE STARTS HERE //////////////////////
+            if (circle.x > canvas.width) {
+                circle.x = 0;
+            }
             
-
-
             // YOUR TODO 7 CODE ENDS HERE //////////////////////////
         }
         
@@ -106,7 +103,7 @@ var init = function (window) {
         
         app.addUpdateable(window.opspark.game);
     }
-};
+
 
 // DON'T REMOVE THIS CODE //////////////////////////////////////////////////////
 if((typeof process !== 'undefined') &&
