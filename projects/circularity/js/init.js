@@ -37,11 +37,11 @@ var init = function (window) {
         drawCircle();
         drawCircle();
         drawCircle();
-        drawCircle();
+        drawCircle();{
         for (var  drawCircle = 0; drawCircle < 10; drawCircle++) {
             // do something
         }
-        
+    }
         ////////////////////////////////////////////////////////////
         ///////////////// PROGRAM LOGIC ////////////////////////////
         ////////////////////////////////////////////////////////////
@@ -84,12 +84,7 @@ var init = function (window) {
             }
             
             // TODO 7 : YOUR CODE STARTS HERE //////////////////////
-            if (circle.x < 0){
-                canvas.width = 0;
-            }
-            if (circle.y < 0){
-                canvas.height = 0;
-            }
+
             if(circle.y > canvas.height){
                 circle.y = 0;
             }
