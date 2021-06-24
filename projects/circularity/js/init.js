@@ -38,7 +38,7 @@ var init = function (window) {
         drawCircle();
         drawCircle();
         drawCircle();{
-        for (var  drawCircle = 0; drawCircle < 100; drawCircle++) {
+        for (var  drawCircle = 0; drawCircle < 10; drawCircle++) {
             // do something
     } 
 
